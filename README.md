@@ -11,7 +11,7 @@ yarn dev
 # or
 pnpm dev
 ```
-                    //   github remote is logic in master branch  //
+                    //   github remote is logics in master branch  //
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
