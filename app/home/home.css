@@ -1,0 +1,10 @@
+.firstClass {
+    background-image: url(../Images/krystal-ng-O07o2Cd_vX0-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.secondClass {
+    background-image: url(../Images/annie-spratt-wuc-KEIBrdE-unsplash.jpg);
+    background-size: cover;
+    height: 100%;
+}

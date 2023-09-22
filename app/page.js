@@ -54,8 +54,9 @@ setUserName(restStudents)
       <div className="col-8 offset-2">
       <div className="mt-5">
 
-<Link className="mx-3" href="/home">Home</Link>
-<Link href="/about">About</Link>
+<Link href="/home">Home</Link>
+<Link className="mx-3" href="/about">About</Link>
+<Link href="/contact">Contact</Link>
 {user.map((list,i)=>{
   return (
     <div key={i}>
