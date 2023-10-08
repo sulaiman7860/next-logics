@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
-import { collection, addDoc, getDoc, query, where, deleteDoc, doc, updateDoc } from "firebase/firestore"
+import { collection, addDoc, query, where, deleteDoc, doc, updateDoc, getDocs } from "firebase/firestore"
 import { db } from "../../config/firebase"
 
 export default function Firebase() {
@@ -18,7 +18,7 @@ export default function Firebase() {
 
   const fetchDocs = async () => {
     try {
-      const collectionName = collection(db, "abc")
+      const collectionName = collection(db, "users")
       // const queryRef = query(collectionName, where("email","==","naveed@gmail.com"))
       const docs = await getDocs(collectionName)
       const studentsData = []
@@ -82,7 +82,7 @@ export default function Firebase() {
       course
     }
     try {
-      const collectionName = collection(db, "abc")
+      const collectionName = collection(db, "firebase")
 
       await addDoc(collectionName, student)
       console.log("Document written with ID: ");
@@ -109,14 +109,15 @@ export default function Firebase() {
 
               <h1>List of students</h1>
 
-              <table>
+           {students.length >= 1 &&   
+           <table>
                 <tr>
-                  <td>id</td>
-                  <td>Student Name</td>
-                  <td>Student email</td>
-                  <td>Student course</td>
-                  <td>Student delete</td>
-                  <td>Student update</td>
+                  <th>id</th>
+                  <th>Student Name</th>
+                  <th>Student email</th>
+                  <th>Student course</th>
+                  <th>Student delete</th>
+                  <th>Student update</th>
                 </tr>
                 {
                   students.map((student) => {
@@ -134,7 +135,7 @@ export default function Firebase() {
                     )
                   })
                 }
-              </table>
+              </table>}
 
             </div>
           </div>
